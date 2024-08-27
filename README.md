@@ -1,8 +1,4 @@
-# ohw24_proj_template_cc
-
-Template for starting Oceanhackweek project repos. Add country code (cc) in the end to indicate the location of your event (us/au).
-
-This repo is an example of how teams can structure their project repositories and format their project README.md file, but feel free to adapt as suits your needs.
+# ohw24_proj_micronekton_img_pipeline_au
 
 **Folder Structure**
 
@@ -29,7 +25,7 @@ You can start with a simple structure and as you progress you can refine it to c
 |---------------------|------------|---------------------|
 | Participant 1       | Virtual    | Project Facilitator |
 | Participant 2       | Bigelow    | Participant         |
-| Participant 3       | Bigelow    | Participant         |
+| Candice Untiedt      | Australia    | Participant        |
 
 ## Planning
 
