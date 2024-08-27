@@ -3,42 +3,52 @@
 ## Steps for deployment of FathomNet model 
 [Here](FathomNet/MBARI-midwater-supercategory-detector) 
 
-### Create conda environment 
+1. Create and activate Conda environment 
 - in terminal
-```
-$ module use /g/data/hh5/public/modules
+```$ module use /g/data/hh5/public/modules
 $ module load conda/analysis3
 $ python3 -m venv NAME_OF_ENVIRONMENT --system-site-packages 
 $ source NAME_OF_ENVIRONMENT/bin/activate
-Then you can install any missing libraries
-(NAME_OF_ENVIRONMENT) $ pip install ultralytics
 ```
 
-## Clone yolov5 into the conda environment 
+- install any missing libraries
+```(NAME_OF_ENVIRONMENT) $ pip install ultralytics```
+
+2. Clone yolov5 into the Conda environment 
 - in terminal
-$ python
+```$ python
 >>> git clone https://github.com/ultralytics/yolov5
 cd yolov5
 pip install -r requirements.txt
+```
 
-- to check that yolov5 has been cloned and is working
-import torch
+- Check that yolov5 has been cloned and is working in your Conda environment 
+```import torch
 model = torch.hub.load("ultralytics/yolov5", "yolov5s")  # or yolov5n - yolov5x6, custom
+```
 
-## Preparation to run model
+3. Prepare to run the model
 - download weights file [Here](https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector/blob/main/best.pt)
-- upload imagery to run against model
+- upload imagery to run against model and copy this path 
 
-## Run model 
+4. Run model 
 - in terminal
-$ cd NAME_OF_ENVIRONMENT
+```$ cd NAME_OF_ENVIRONMENT
 $ source bin/activate
 $ cd ..yolov5
-$ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video
+$ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video --save-txt --save-csv --save-crop
+```
 
-## Output
+5. Output
+Outputs saved into ..reuns/detect/exp(n) where n is the run number
+* original images with bounding box predictions
+* .txt bounding box information for each image
+* .csv predictions per image
+* crops of predicted classes for each image
 
 
+
+  
 
 
 
