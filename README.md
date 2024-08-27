@@ -14,7 +14,7 @@ preserve relative paths, but the dataset does not need to be added to git/GitHub
 You can start with a simple structure and as you progress you can refine it to contain more components. [Here](https://cookiecutter-data-science.drivendata.org/#directory-structure) is an example of a more elaborate structure for a data science project.
 
 ## Project Name
-
+Micronekton Imagery Pipeline + AI
 ## One-line Description
 
 ## Planning
@@ -23,23 +23,16 @@ You can start with a simple structure and as you progress you can refine it to c
 
 | Name                | Location   | Role                |
 |---------------------|------------|---------------------|
-| Participant 1       | Virtual    | Project Facilitator |
-| Participant 2       | Bigelow    | Participant         |
-| Candice Untiedt      | Australia    | Participant        |
-
-## Planning
-
-* Initial idea: "short description"
-* Ideation jam board: Add link
-* Ideation Presentation: Add link
-* Slack channel: ohw24_proj_name
-* Project google drive: Add link
-* Final presentation: Add link
+| Ryan Downie       | Australia    | Project Leader |
+| Bowen Zhang       | Australia    | Contributor         |
+| Reg        | Australia    | Contributor         |
+| Candice Untiedt      | Australia    | Contributor       |
 
 ## Background
-
+The PLAOS platform used by CSIRO collects vertical profile data through the water column including physical, acoustic and imagery data. 
 ## Goals
-
+This project aims to interface with the marimba platform by developing a PLAOS pipeline to manage and process data. 
+This project is also aiming to test the application of an existing AI-ML model (FathomNet/MBARI-midwater-supercategory-detector) to the imagery from the oblique camera in order to detect classes of interest.
 ## Datasets
 
 ## Workflow/Roadmap
