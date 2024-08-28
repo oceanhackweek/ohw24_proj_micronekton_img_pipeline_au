@@ -4,7 +4,7 @@
 
 [FathomNet/MBARI-midwater-supercategory-detector](https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector)
 
-1. Create and activate Conda environment 
+1. Create and activate Conda environment
 in a terminal window
   
 ```
@@ -55,8 +55,7 @@ $ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video 
 5. Outputs
 
 * original images with bounding box predictions
-![Alt text](scratch/nf33/cu2464/Station_03/OBL00162.JPG)
-
+![Full size with prediction](Images/OBL00162.JPG) 
 * .txt bounding box information for each image
 * .csv predictions per image
 * crops of predicted classes for each image
