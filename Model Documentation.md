@@ -68,19 +68,20 @@ $ cd runs/detect/
 $ rsync -ravzP ./exp /path/to/DESTINATION
 ```
 
-1.  Original image with bounding box predictions
+
+> 1.  Original image with bounding box predictions
 
 ![Full size image with prediction](Images/OBL00162.JPG "image with bounding box prediction")
 
-2. Cropped bounding box of predicted classes for each image
+> 2. Cropped bounding box of predicted classes for each image
 
 ![cropped bounding box](Images/crop_OBL00162.jpg "bounding box image for prediction above") 
 
-3. .txt file with all the bounding box information for each image
+> 3. .txt file with all the bounding box information for each image
 
 [link to text file for this image](/Images/OBL00162.txt)
 
-4. csv file with predictions and confidence levels for each image in the processed batch
+> 4. csv file with predictions and confidence levels for each image in the processed batch
 
 [link to csv file for processed images in this batch](/Images/predictions.csv)
 
