@@ -73,7 +73,7 @@ $ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video 
 
 * csv file with predictions and confidence levels for each image in the processed batch
 
-[link to csv file for this image](/Images/predictions.csv)
+[link to csv file for processed images in this batch](/Images/predictions.csv)
 
 > #### Outputs saved into ..yolov5/runs/detect/exp(n) where n is the run number
 >
