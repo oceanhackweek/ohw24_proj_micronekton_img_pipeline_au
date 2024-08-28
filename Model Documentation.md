@@ -7,7 +7,8 @@
 1. Create and activate Conda environment 
 in a terminal window
   
-```$ module use /g/data/hh5/public/modules
+```
+$ module use /g/data/hh5/public/modules
 $ module load conda/analysis3
 $ python3 -m venv NAME_OF_ENVIRONMENT --system-site-packages 
 $ source NAME_OF_ENVIRONMENT/bin/activate
@@ -15,7 +16,8 @@ $ source NAME_OF_ENVIRONMENT/bin/activate
 
 install any missing libraries
 
-```$ (NAME_OF_ENVIRONMENT) $ pip install ultralytics
+```
+$ (NAME_OF_ENVIRONMENT) $ pip install ultralytics
 ```
 
 2. Clone yolov5 into the Conda environment
