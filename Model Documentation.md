@@ -1,4 +1,4 @@
-# Micronekton detection documentation 
+# Micronekton Detection Documentation 
 
 ## Steps for deployment of FathomNet model 
 
@@ -65,15 +65,15 @@ $ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video 
 
 * .crops of predicted classes for each image
 
-![cropped bounding box](Images/crop_OBL00162.JPG) 
+![cropped bounding box](Images/crop_OBL00162.jpg) 
 
-* .txt bounding box information for each image
+* .txt file with all the bounding box information for each image
 
-* csv predictions per image
+* csv file with predictions and confidence levels for each image
 
-#### Outputs saved into ..yolov5/runs/detect/exp(n) where n is the run number
-
-##### To change the location of the outputs, in the yolov5 dir
+> #### Outputs saved into ..yolov5/runs/detect/exp(n) where n is the run number
+>
+> ##### To change the location of the outputs, in the yolov5 dir
 
 ```
 $ cd runs/detect/
@@ -81,22 +81,5 @@ $ rsync -ravzP ./exp /path/to/DESTINATION
 ```
 
 
-
-  
-
-
-
-
-
-
-
-
- 
-
-### list 
-
-normal text 
-- list
-- subsequent item
 
 
