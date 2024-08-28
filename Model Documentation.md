@@ -31,7 +31,7 @@ $ cd yolov5/
 $ pip install -r requirements.txt
 ```
 
-#### Check that `yolov5` has been cloned and all packages are working in your Conda environment
+#### Check that `yolov5` has been cloned and all packages are working in  Conda environment
 
 ```
 $ cd (NAME_OF_ENVIRONMENT)
@@ -42,9 +42,9 @@ $ python
 
 ### Prepare to run the model
 
-* download [weights file]('https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector/blob/main/best.pt')
-
-* upload imagery to run against model and copy this path (to your imagery) 
+> download [weights file](https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector/blob/main/best.pt)
+>
+> upload the imagery you want to run the model over and use the path when running the model script below 
 
 ### Run the model 
 
@@ -61,15 +61,19 @@ $ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video 
 
 * original images with bounding box predictions
 
-![Full size with prediction](Images/OBL00162.JPG)
+![Full size image with prediction](Images/OBL00162.JPG "image with bounding box prediction")
 
 * .crops of predicted classes for each image
 
-![cropped bounding box](Images/crop_OBL00162.jpg) 
+![cropped bounding box](Images/crop_OBL00162.jpg "bounding box image for prediction above") 
 
 * .txt file with all the bounding box information for each image
 
-* csv file with predictions and confidence levels for each image
+[link to text file for this image](/Images/OBL00162.txt)
+
+* csv file with predictions and confidence levels for each image in the processed batch
+
+[link to csv file for this image](/Images/predictions.csv)
 
 > #### Outputs saved into ..yolov5/runs/detect/exp(n) where n is the run number
 >
