@@ -1,57 +1,92 @@
-# Micronekton detection documentation 
+# Micronekton Detection Documentation 
 
 ## Steps for deployment of FathomNet model 
-[Here](FathomNet/MBARI-midwater-supercategory-detector) 
 
-### Create conda environment 
-- in terminal
+[FathomNet/MBARI-midwater-supercategory-detector](https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector)
+
+### Create and activate Conda environment
+
+> in a terminal window
+  
+```
 $ module use /g/data/hh5/public/modules
 $ module load conda/analysis3
 $ python3 -m venv NAME_OF_ENVIRONMENT --system-site-packages 
 $ source NAME_OF_ENVIRONMENT/bin/activate
-Then you can install any missing libraries
-(NAME_OF_ENVIRONMENT) $ pip install ultralytics
+```
 
+> install any missing libraries
 
-## Clone yolov5 into the conda environment 
-- in terminal
+```
+$ (NAME_OF_ENVIRONMENT) $ pip install ultralytics
+```
+
+### Clone `yolov5` into the Conda environment
+
+> in a terminal window
+
+```
+$ git clone https://github.com/ultralytics/yolov5
+$ cd yolov5/
+$ pip install -r requirements.txt
+```
+
+#### Check that `yolov5` has been cloned and all packages are working in  Conda environment
+
+```
+$ cd (NAME_OF_ENVIRONMENT)
 $ python
->>> git clone https://github.com/ultralytics/yolov5
-cd yolov5
-pip install -r requirements.txt
+>>> import torch
+>>> model = torch.hub.load("ultralytics/yolov5", "yolov5s")  
+```
 
-- to check that yolov5 has been cloned and is working
-import torch
-model = torch.hub.load("ultralytics/yolov5", "yolov5s")  # or yolov5n - yolov5x6, custom
+### Prepare to run the model
 
-## Preparation to run model
-- download weights file [Here](https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector/blob/main/best.pt)
-- upload imagery to run against model
+> download [weights file](https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector/blob/main/best.pt)
+>
+> upload the imagery you want to run the model over and use the path when running the model script below 
 
-## Run model 
-- in terminal
+### Run the model 
+
+> in a terminal window
+
+```
 $ cd NAME_OF_ENVIRONMENT
 $ source bin/activate
-$ cd ..yolov5
-$ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video
+$ cd ../yolov5/
+$ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video --save-txt --save-csv --save-crop
+```
 
-## Output
+### Outputs
+
+> #### Outputs saved into ..yolov5/runs/detect/exp(n) where n is the run number
+>
+> ##### To change the location of the outputs, in the yolov5 dir
+
+```
+$ cd runs/detect/
+$ rsync -ravzP ./exp /path/to/DESTINATION
+```
+
+
+> 1.  Original image with bounding box predictions
+
+![Full size image with prediction](Images/OBL00162.JPG "image with bounding box prediction")
+
+> 2. Cropped bounding box of predicted classes for each image
+
+![cropped bounding box](Images/crop_OBL00162.jpg "bounding box image for prediction above") 
+
+> 3. .txt file with all the bounding box information for each image
+
+[link to text file for this image](/Images/OBL00162.txt)
+
+> 4. csv file with predictions and confidence levels for each image in the processed batch
+
+[link to csv file for processed images in this batch](/Images/predictions.csv)
 
 
 
 
-
-
-
-
-
-
- 
-
-### list 
-
-normal text 
-- list
-- subsequent item
 
 
