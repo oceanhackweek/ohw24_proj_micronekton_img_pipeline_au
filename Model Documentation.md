@@ -2,7 +2,7 @@
 
 ## Steps for deployment of FathomNet model 
 
-[FathomNet/MBARI-midwater-supercategory-detector](('https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector)')
+[FathomNet/MBARI-midwater-supercategory-detector]('https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector')
 
 1. Create and activate Conda environment 
 in a terminal window
