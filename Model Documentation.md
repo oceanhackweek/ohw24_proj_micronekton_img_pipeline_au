@@ -20,7 +20,7 @@ install any missing libraries
 $ (NAME_OF_ENVIRONMENT) $ pip install ultralytics
 ```
 
-2. Clone yolov5 into the Conda environment
+2. Clone `yolov5` into the Conda environment
 in a terminal window
 
 ```
@@ -29,7 +29,7 @@ $ cd yolov5/
 $ pip install -r requirements.txt
 ```
 
-3. Check that yolov5 has been cloned and all packages are working in your Conda environment
+3. Check that `yolov5` has been cloned and all packages are working in your Conda environment
 
 ```
 $ cd (NAME_OF_ENVIRONMENT)
@@ -45,7 +45,8 @@ $ python
 4. Run the model 
 in a terminal window
 
-```$ cd NAME_OF_ENVIRONMENT
+```
+$ cd NAME_OF_ENVIRONMENT
 $ source bin/activate
 $ cd ../yolov5/
 $ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video --save-txt --save-csv --save-crop
@@ -54,14 +55,16 @@ $ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video 
 5. Outputs
 
 * original images with bounding box predictions
-![Alt text](scratch/nf33/cu2464/Station_03/OBL00162.JPG) 
+![Alt text](scratch/nf33/cu2464/Station_03/OBL00162.JPG)
+
 * .txt bounding box information for each image
 * .csv predictions per image
 * crops of predicted classes for each image
 
 Outputs saved into ..yolov5/runs/detect/exp(n) where n is the run number
 To change the location of the outputs, in the yolov5 dir
-```$ cd runs/detect/
+```
+$ cd runs/detect/
 $ rsync -ravzP ./exp /path/to/DESTINATION
 ```
 
