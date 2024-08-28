@@ -59,22 +59,6 @@ $ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video 
 
 ### Outputs
 
-* original images with bounding box predictions
-
-![Full size image with prediction](Images/OBL00162.JPG "image with bounding box prediction")
-
-* .crops of predicted classes for each image
-
-![cropped bounding box](Images/crop_OBL00162.jpg "bounding box image for prediction above") 
-
-* .txt file with all the bounding box information for each image
-
-[link to text file for this image](/Images/OBL00162.txt)
-
-* csv file with predictions and confidence levels for each image in the processed batch
-
-[link to csv file for processed images in this batch](/Images/predictions.csv)
-
 > #### Outputs saved into ..yolov5/runs/detect/exp(n) where n is the run number
 >
 > ##### To change the location of the outputs, in the yolov5 dir
@@ -83,6 +67,24 @@ $ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video 
 $ cd runs/detect/
 $ rsync -ravzP ./exp /path/to/DESTINATION
 ```
+
+1.  Original image with bounding box predictions
+
+![Full size image with prediction](Images/OBL00162.JPG "image with bounding box prediction")
+
+2. Cropped bounding box of predicted classes for each image
+
+![cropped bounding box](Images/crop_OBL00162.jpg "bounding box image for prediction above") 
+
+3. .txt file with all the bounding box information for each image
+
+[link to text file for this image](/Images/OBL00162.txt)
+
+4. csv file with predictions and confidence levels for each image in the processed batch
+
+[link to csv file for processed images in this batch](/Images/predictions.csv)
+
+
 
 
 
