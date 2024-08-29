@@ -6,7 +6,10 @@
 
 ### Create and activate Conda environment
 
+#### You only need to create your Conda environment once - proceed to the "Run Model" step if you have already done this 
+
 > in a terminal window
+> navigate into the folder you want to create a virtual environment in
   
 ```
 $ module use /g/data/hh5/public/modules
@@ -39,6 +42,11 @@ $ python
 >>> import torch
 >>> model = torch.hub.load("ultralytics/yolov5", "yolov5s")  
 ```
+> return to the terminal window
+
+```
+$ exit()
+```
 
 ### Prepare to run the model
 
@@ -61,7 +69,7 @@ $ python detect.py --weights /path/to/best.pt --source /path/to/images-or-video 
 
 > #### Outputs saved into ..yolov5/runs/detect/exp(n) where n is the run number
 >
-> ##### To change the location of the outputs, in the yolov5 dir
+> ##### To move the outputs to a different location
 
 ```
 $ cd runs/detect/
