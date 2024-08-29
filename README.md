@@ -1,23 +1,8 @@
 # ohw24_proj_micronekton_img_pipeline_au
 
-**Folder Structure**
-
-* `contributor_folders` Each contributor can make a folder here and 
-push their work here during the week. This will allow everyone to see each others work but prevent any merge conflicts.
-* `final_notebooks` When the team develops shared final notebooks, they 
-can be shared here. Make sure to communicate so that you limit merge conflicts.
-* `scripts` Shared scripts or functions can be added here.
-* `data` Shared dataset can be shared here. Note, do not put large datasets on GitHub. Speak to the organizers if you 
-need to share large datasets. Each team member can have a version of the dataset locally in the same folder to 
-preserve relative paths, but the dataset does not need to be added to git/GitHub (you can use `.gitignore`).
-
-You can start with a simple structure and as you progress you can refine it to contain more components. [Here](https://cookiecutter-data-science.drivendata.org/#directory-structure) is an example of a more elaborate structure for a data science project.
-
 ## Project Name
-Micronekton Imagery Pipeline + AI
-## One-line Description
 
-## Planning
+Micronekton Imagery Pipeline + AI
 
 ## Collaborators
 
@@ -30,15 +15,45 @@ Micronekton Imagery Pipeline + AI
 
 ## Background
 The PLAOS platform used by CSIRO collects vertical profile data through the water column including physical, acoustic and imagery data. 
+
+![PLAOS platform](Images/PLAOS.JPG "PLAOS platform")
+
 ## Goals
-This project aims to interface with the marimba platform by developing a PLAOS pipeline to manage and process data. 
-This project is also aiming to test the application of an existing AI-ML model (FathomNet/MBARI-midwater-supercategory-detector) to the imagery from the oblique camera in order to detect classes of interest.
+
+1. Interface with the marimba platform by developing a PLAOS pipeline to manage and process data. Marimba is a Python framework designed for efficient processing of FAIR (Findable, Accessible, Interoperable, and Reusable) scientific marine image datasets.  
+
+2. Apply an an existing AI-ML model [FathomNet/MBARI-midwater-supercategory-detector](https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector) to imagery from the oblique camera in order to detect midwater faunal classes and develop a mosaic of images for the detected classes. 
+
 ## Datasets
 
-## Workflow/Roadmap
+1. PLAOS data: acoustic, imagery (vertical stereo cameras and oblique camera) and log data
+  
+2. Oblique imagery from IN2020_V08
 
 ## Results/Findings
 
-## Lessons Learned
+2. The [FathomNet/MBARI-midwater-supercategory-detector](https://huggingface.co/FathomNet/MBARI-midwater-supercategory-detector) was successfully run on oblique camera stills imagery from 15 stations (subset) to detect 16 faunal classes.
 
-## References
+### Outputs 
+
+> a.  Original image with bounding box predictions
+
+![Full size image with prediction](Images/OBL00162.JPG "image with bounding box prediction")
+
+> b. Cropped bounding box of predicted classes for each image
+
+![cropped bounding box](Images/crop_OBL00162.jpg "bounding box image for prediction above") 
+
+> c. .txt file with all the bounding box information for each image
+
+[link to text file for this image](/Images/OBL00162.txt)
+
+> d. csv file with predictions and confidence levels for each image in the processed batch
+
+[link to csv file for processed images in this batch](/Images/predictions.csv)
+
+> e. mosaic of detected class images for each station, arranged by class and including a text overlay
+
+[link to csv file for processed images in this batch](/Images/Mosaic_image_Station07.png)
+
+
