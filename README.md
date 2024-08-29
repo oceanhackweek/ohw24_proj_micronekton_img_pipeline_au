@@ -10,7 +10,7 @@ Micronekton Imagery Pipeline + AI
 |---------------------|------------|---------------------|
 | Ryan Downie       | Australia    | Project Leader |
 | Bowen Zhang       | Australia    | Contributor         |
-| Reg        | Australia    | Contributor         |
+| Reg  Dowse      | Australia    | Contributor         |
 | Candice Untiedt      | Australia    | Contributor       |
 
 ## Background
