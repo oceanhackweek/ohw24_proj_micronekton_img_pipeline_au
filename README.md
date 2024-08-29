@@ -54,6 +54,6 @@ The PLAOS platform used by CSIRO collects vertical profile data through the wate
 
 > e. mosaic of detected class images for each station, arranged by class and including a text overlay
 
-[link to csv file for processed images in this batch](/Images/Mosaic_image_Station07.png)
+![Mosaic image for Station 07](/Images/Mosaic_image_Station07.png "Mosaic of detected classes for Station 07")
 
 
